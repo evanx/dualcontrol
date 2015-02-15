@@ -12,4 +12,4 @@ This code was integrated into a production system by myself in 2013, for the pur
 
 On this subject, also see <a href="http://github.com/evanx/keyserver">github.com/evanx/keyserver</a> - a re-implementation of dualcontrol in Node.js. It provides a secure "vault" server with client-authenticated HTTPS access. It uses Redis to store encrypted data, and the encryption keys. Encryption keys are protected by split-knowledge passwords, hashed with PDKDF2, and encrypted using AES.
 
-For technical articles and sample code: https://github.com/evanx/vellum/wiki
+For various (un)related technical articles and sample code: https://github.com/evanx/vellum/wiki
