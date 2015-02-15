@@ -6,7 +6,9 @@ Commmon utilities were copied from <a href="https://github.com/evanx/vellum">git
 
 This was originally copied from <a href="https://github.com/evanx/vellum/tree/master/src/dualcontrol">vellum/src/dualcontrol</a>. However it is possible that more recent changes to the code were made there, for the purposes of the <a href="https://github.com/evanx/vellum/wiki/DualControl">Dual Control</a> article.
 
-We use a JCEKS keystore to store data-encrypting keys, protected by split-knowledge passwords. We use client-authenticated SSL connections for custodians to submit partial passwords, to firstly generate, and thereafter load data-encrypting keys from this keystore.
+We use a JCEKS keystore to store data-encrypting keys, protected by split-knowledge passwords. We use client-authenticated SSL connections for custodians to submit partial passwords, to generate data-encrypting keys, and thereafter load a key from this keystore.
+
+A fork of this code was integrated into a production system by myself in 2013, for the purposes of PCI DSS compliance, which was achieved.
 
 On this subject, also see <a href="http://github.com/evanx/keyserver">github.com/evanx/keyserver</a> - a re-implementation of dualcontrol in Node.js. It provides a secure "vault" server with client-authenticated HTTPS access. It uses Redis to store encrypted data, and the encryption keys. Encryption keys are protected by split-knowledge passwords, hashed with PDKDF2, and encrypted using AES.
 
